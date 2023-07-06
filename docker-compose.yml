@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  postgresdb:
+    container_name: abra_pg
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=abra_pg
+      - POSTGRES_USER=appserver
+      - POSTGRES_PASSWORD=qwer4321
+      - POSTGRES_PORT=5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432

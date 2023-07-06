@@ -1,0 +1,59 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "ABRA Test API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "",
+            "description": "API for developing"
+        }
+    ],
+    "paths": {
+        "/api/products": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Return All Products",
+                "description": "Display a listing of the resource.",
+                "operationId": "d97d1c3727cbac49708b85f7d11f7d58",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "name": {
+                                            "description": "Name",
+                                            "type": "string",
+                                            "example": "Vodka"
+                                        },
+                                        "price": {
+                                            "description": "Price",
+                                            "type": "number",
+                                            "example": "9.99"
+                                        },
+                                        "image": {
+                                            "description": "Image",
+                                            "type": "string",
+                                            "example": "image.jpg"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
