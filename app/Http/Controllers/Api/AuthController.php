@@ -11,12 +11,10 @@ use Illuminate\Validation\Rules;
 
 class AuthController extends Controller
 {
-
     public function user(Request $request)
     {
         return $request->user();
     }
-
 
     public function login(Request $request)
     {
